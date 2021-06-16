@@ -59,6 +59,7 @@ public class ClubInfoRegisterControllerServlet extends HttpServlet {
 		try {
 			// TODO; DBから情報を取得
 			ResultSet rs = db.executeSelectQuery(sql, paramList);
+
 			while (rs.next()) {
 				// TODO: beanにDBから取得した値をセット
 				bean.setClubName(rs.getString("club_name"));
