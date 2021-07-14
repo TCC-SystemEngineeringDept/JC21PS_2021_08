@@ -44,7 +44,7 @@ public class ParticipantListControllerServlet extends HttpServlet {
 		String activityId = (String)request.getSession().getAttribute("activity_id");
 
 		// TODO: データベースから必要な情報を取得するためのSQL文を完成させなさい。
-		String sql = "SELECT user_id,activity_id FROM trn_activity  WHERE request.activity_id = ?";
+		String sql = "SELECT user_id,activity_id FROM trn_activity left join trn_participant on trn_activity.activity_id = trn_participant.activity_id  WHERE request.activity_id = ?";
 
 		// SQLに埋め込むパラメータリストを定義
 		List<String> paramList = new ArrayList<String>();
