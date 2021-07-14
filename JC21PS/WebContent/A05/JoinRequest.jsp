@@ -40,6 +40,7 @@
   		<tr>
   			<th colspan="2">部活説明</th>
   		</tr>
+
   		<% for(int i = 0; i < bean.getClubIdList().size(); i++){ %>
   		<tr>
   			<%--TODO
